@@ -2,12 +2,12 @@ const express = require('express');
 const {v4: uuidv4} =require('uuid')
 const app = express();
 const observacoesPorlembreteId = {}
+app.use(express.json())
 
 
-app.use(bodyParse.json());
 
 app.post('/lembretes/:id/observacoes', (req,res) => {
-    const idDbs = uuidv4();
+    const idObs = uuidv4();
     const {texto } = req.body;
     const observacoesDoLembrete =
     observacoesPorLembreteId[req.params.id] || [];
