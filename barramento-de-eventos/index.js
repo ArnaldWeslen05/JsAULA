@@ -12,7 +12,6 @@ app.post('/eventos', (req,res)=>{
     res.send({ msg: 'ok'});
 });
 
-
 app.listen(10000, () => {
     console.log('Barramento de eventos .Porta 10000.');
 });
